@@ -1,38 +1,59 @@
 # Hospeda
 
-Aplicación local para registrar habitaciones y alquileres de un hospedaje. Está pensada para que el control diario sea sencillo y para conservar un respaldo de los datos del huésped y de cada alquiler.
+Aplicación de escritorio local para gestionar habitaciones y alquileres de un hospedaje. Reemplaza el registro manual en papel por una herramienta visual que organiza ocupación, huéspedes, pagos e ingresos.
 
-## Funciones
+**Estado:** Completado · **Plataforma:** Windows · **Uso:** local, en una sola computadora
 
-- Registrar, editar y organizar habitaciones disponibles y ocupadas.
-- Guardar alquileres con huésped, celular, DNI, fechas, modalidad de cobro, monto y estado de pago.
-- Registrar gastos y consultar indicadores del mes en la aplicación.
-- Guardar la información localmente en SQLite y actualizar `hospedaje.xlsx` con los datos básicos de los alquileres.
-- Crear un respaldo JSON local.
+## Capturas de pantalla
+
+En esta sección se mostrarán imágenes de la aplicación. Las capturas se agregarán después de ocultar cualquier dato personal de huéspedes.
+
+<!-- Cuando estén listas, agrega las imágenes aquí. Ejemplo: ![Panel principal](docs/capturas/panel-principal.png) -->
+
+## Problema que resuelve
+
+En un hospedaje pequeño, llevar habitaciones, fechas de alquiler, pagos y gastos en papel puede dificultar saber qué cuartos están ocupados y cuánto se generó durante el mes. Hospeda reúne esos registros en un panel sencillo y permite consultar la información del negocio.
+
+## Funciones principales
+
+- Crear y editar habitaciones, identificadas con el número y tipo que el hospedaje necesite.
+- Ver las habitaciones disponibles y ocupadas de forma separada.
+- Registrar alquileres con nombre del huésped, DNI, celular, fechas, modalidad de cobro y monto.
+- Consultar el estado de pago y los días restantes del alquiler.
+- Registrar gastos y consultar los ingresos y gastos del mes.
+- Guardar los datos de la aplicación localmente en una base SQLite.
+- Actualizar un archivo Excel con los datos de respaldo del alquiler y crear copias JSON locales.
 
 ## Tecnologías
 
-- HTML, CSS y JavaScript para la interfaz.
-- Python para el servidor local.
-- SQLite para guardar los registros de la aplicación.
-- Excel (`.xlsx`) para el respaldo de los alquileres.
+| Tecnología | Uso |
+| --- | --- |
+| HTML, CSS y JavaScript | Interfaz y comportamiento de la aplicación |
+| Python | Servidor local y operaciones con los datos |
+| SQLite | Almacenamiento local de habitaciones y alquileres |
+| Excel (`.xlsx`) y JSON | Archivos de respaldo |
 
 ## Cómo iniciar en Windows
 
-1. Instala Python 3.9 o posterior.
-2. Abre `iniciar_hospeda.bat`.
-3. La aplicación se abrirá en el navegador. Para crear un acceso directo en el escritorio, abre `crear_acceso_directo.bat`.
+1. Descarga o descomprime la carpeta del proyecto en la computadora.
+2. Instala Python 3.9 o posterior si aún no está instalado.
+3. Abre `iniciar_hospeda.bat`. Se iniciará el servidor local y se abrirá la aplicación en el navegador.
+4. Opcional: abre `crear_acceso_directo.bat` para crear un acceso directo en el escritorio.
 
-La aplicación funciona en la misma computadora sin publicar los datos en un servicio externo. Los archivos de datos locales están excluidos de Git mediante `.gitignore`.
+Hospeda funciona en la computadora donde se inicia y no necesita una cuenta en línea para guardar los registros.
+
+## Almacenamiento y privacidad
+
+La información de operación se guarda localmente. El Excel y las copias de respaldo pueden contener nombres, DNI y teléfonos; por eso, los archivos de datos reales no se incluyen en este repositorio. Antes de compartir capturas, oculta los datos personales de ejemplo o de huéspedes.
 
 ## Archivos principales
 
-- `index.html`: interfaz y lógica de la aplicación.
-- `server.py`: servidor local, persistencia SQLite y generación del Excel.
-- `iniciar_hospeda.bat`: inicia el servidor y abre la aplicación.
-- `crear_acceso_directo.bat`: crea un acceso directo de Windows.
-- `hospeda-logo.svg` y `hospeda.ico`: identidad visual.
+- `index.html`: interfaz de la aplicación.
+- `server.py`: servidor local, almacenamiento SQLite y generación de respaldos.
+- `iniciar_hospeda.bat`: inicia Hospeda en Windows.
+- `crear_acceso_directo.bat`: crea el acceso directo en el escritorio.
+- `hospeda-logo.svg` y `hospeda.ico`: recursos de identidad visual.
 
-## Estado
+## Alcance actual
 
-Proyecto en desarrollo. Antes de usarlo con datos reales, verifica los cálculos y conserva una copia de seguridad independiente. No incluyas en el repositorio el Excel, la base de datos SQLite ni los respaldos JSON, porque pueden contener nombres, DNI y teléfonos.
+Proyecto completado para su uso local en computadora con Windows. Los datos permanecen en ese equipo; esta versión no sincroniza información con la nube ni con otros dispositivos.
