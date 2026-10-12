@@ -6,9 +6,26 @@ Aplicación de escritorio local para gestionar habitaciones y alquileres de un h
 
 ## Capturas de pantalla
 
-En esta sección se mostrarán imágenes de la aplicación. Las capturas se agregarán después de ocultar cualquier dato personal de huéspedes.
+Las siguientes imágenes muestran las principales pantallas de Hospeda. Los registros mostrados son ficticios.
 
-<!-- Cuando estén listas, agrega las imágenes aquí. Ejemplo: ![Panel principal](docs/capturas/panel-principal.png) -->
+<table>
+  <tr>
+    <td width="50%"><img src="./01-panel-principal.png" alt="Panel principal con habitaciones, ingresos y gastos"></td>
+    <td width="50%"><img src="./02-registro-alquiler.png" alt="Formulario de registro de alquiler"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Panel principal</strong><br>Habitaciones, ocupación e indicadores del mes.</td>
+    <td align="center"><strong>Registro de alquiler</strong><br>Datos del huésped, fechas, tarifa y monto.</td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./03-habitaciones-ocupadas.png" alt="Vista de habitaciones ocupadas y próximos cobros"></td>
+    <td width="50%"><img src="./04-resumen-mensual.png" alt="Resumen mensual de ingresos y gastos"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Habitaciones ocupadas</strong><br>Estado de cada habitación y próximos cobros.</td>
+    <td align="center"><strong>Resumen mensual</strong><br>Ingresos por habitación, alquileres y gastos.</td>
+  </tr>
+</table>
 
 ## Problema que resuelve
 
@@ -44,7 +61,7 @@ Hospeda funciona en la computadora donde se inicia y no necesita una cuenta en l
 
 ## Almacenamiento y privacidad
 
-La información de operación se guarda localmente. El Excel y las copias de respaldo pueden contener nombres, DNI y teléfonos; por eso, los archivos de datos reales no se incluyen en este repositorio. Antes de compartir capturas, oculta los datos personales de ejemplo o de huéspedes.
+La información de operación se guarda localmente. El Excel y las copias de respaldo pueden contener nombres, DNI y teléfonos; por eso, los archivos de datos reales no se incluyen en este repositorio. Las capturas de esta página usan datos ficticios.
 
 ## Archivos principales
 
